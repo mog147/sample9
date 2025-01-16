@@ -88,12 +88,12 @@ div[class$="__text"],
 
 .gnav__list li+ li {
   border-left: 1px solid var(--dark-main-color);
-  padding: 0 2rem;
+  padding: 0rem 2rem;
   margin: auto 0;
 }
 
 .gnav__list li:first-child{
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   margin: auto 0;
 }
 
@@ -217,8 +217,12 @@ div[class$="__text"],
 .conC__text{
   display: block;
   text-align: left!important;
+  
 }
 
+.conC__text p{
+  text-align: left!important;
+}
 
 
 /* conC */
@@ -226,14 +230,13 @@ div[class$="__text"],
 /* conD */
 
 .conD__image {
-  height: 120vh;
+  height: 100vh;
   min-height: 300px;
-  position: relative;
-  min-width:fit-content; 
   background-image:url(../img/cut.png);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100%;
+  object-fit: cover;
 }
 
 /* conD */
@@ -252,7 +255,7 @@ div[class$="__text"],
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(3, 450px);
+  grid-template-columns: repeat(3, 30rem);
   gap: 10px 20px
 }
 
@@ -264,13 +267,18 @@ div[class$="__text"],
   font-style: normal;
 }
 
+.conE__text p{
+  text-align: left;
+}
+
+
 .conE__item {
 	width: 100%;
   
 }
 .conE__image{
-  height: 450px;
-  width: 450px;
+  height: 25rem;
+  width: 25rem;
   object-fit: cover;
 }
 
@@ -285,22 +293,24 @@ div[class$="__text"],
 /* conF */
 
 .conF__image{
-  height: 250vh;
-  min-height: 450px;
+  height: 100vh;
+  min-height: 1800px;
   background-image: url(../img/gallery.png);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100%;
+  object-fit: cover;
 
 }
 
 .conF__image2{
-  height: 170vh;
-  min-height: 450px;
+  height: 100vh;
+  min-height: 1420px;
   background-image: url(../img/store.png);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100%;
+  object-fit: cover;
 
 }
 /* conF */
@@ -308,12 +318,14 @@ div[class$="__text"],
 /* conG */
 
   .conG__image{
-    height: 220vh;
-    min-height: 450px;
+    height: 100vh;
+    min-height: 1650px;
     background-image: url(../img/staff.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100%;
+    object-fit: cover;
+
 }
 
 /* conG */
@@ -347,6 +359,11 @@ div[class$="__text"],
   text-align: left!important;
 }
 
+.conH__text p{
+  display: block;
+  text-align: left!important;
+}
+
 
 /* conH */
 /* --------------------------------- */
@@ -362,13 +379,38 @@ div[class$="__text"],
   margin-top: -10rem;
 }
 
-.more__btn p{
+.more__btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5rem auto;
+  padding: 0;
+  width: 300px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid var(--dark-main-color);
+  border-radius: 10px;
+}
+
+
+.button04 a:hover {
+  color: var(--main-color);
+  text-decoration: none;
+  background-color:var(--dark-main-color);
+}
+
+.button04 a:hover::after {
+  border-top: 3px solid var(--dark-main-color);
+  border-right: 3px solid var(--dark-main-color);
+}
+
+ p{
   color: var(--dark-main-color);
   font-family: "minion-pro", serif;
   font-weight: 400;
   font-style: normal;
-  width: 500px;
-  padding-left: 155px;
+  text-align: center;
 }
 
 
@@ -411,7 +453,7 @@ div[class$="__text"],
   position: absolute;
   width: 100%;
   height: 4px;
-  background: #ffffff;
+  background:var(--dark-main-color);
   border-radius: 10px;
   -webkit-transition: all 400ms;
   transition: all 400ms;
@@ -452,22 +494,63 @@ div[class$="__text"],
 /* --------------------------------- */
 /*----- footer -----*/
 
+.sns__list{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sns__item a {
+  text-decoration: none;
+  font-size: 42px;
+  color: var(--dark-main-color);
+}
+
+.sns__item:last-child a {
+  margin-right: 0;
+}
+
+.sns__item a:hover{
+    background-color:rgba(51,51,51,0.1) ;
+}
+
+
 .footer{
   width: 100%;
   height: auto;
-  background-color:var(--text-bright-color);
-  color: var(--text-bright-color);
   bottom: 0; /*下に固定*/
   margin-top: 3rem;
+  background-color: var(--text-bright-color);
 }
 
-
-.foot {
+.footA {
+  display: flex;
+  justify-content: center;
   text-align: center;
+  padding-top: 3rem;
   letter-spacing: 0.2rem;
 }
 
+.footA :first-child{
+  padding: 0 1rem;
+  margin: auto 0;
+}
 
+.footA a{
+  color: var(--dark-main-color);
+}
+
+.footA a+ a {
+  border-left: 1px solid var(--dark-main-color);
+  padding: 0 1ch;
+  margin: auto 0;
+}
+
+.footB{
+  text-align: center;
+}
 
 
 
@@ -494,12 +577,107 @@ div[class$="__text"],
     padding: 3rem!important;
 }
 
+section{
+  margin: 0;
+}
+
 div[class$="__text"], 
 [class*="__text "] {
  line-height: 2rem;
 }
 
 
+.conB__image{
+  top: 50%;
+}
+
+.conB__box{
+  height: 500px;
+  margin-bottom: 10rem;
+}
+
+.conC{
+  min-height: 200px;
+}
+.conD__image{
+  height: 100vh;
+  margin-top: 3rem;
+  margin-bottom: -30rem;
+}
+.conE{
+  margin-top: -30rem;
+}
+
+.conE .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conE__list{
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 195px;
+}
+
+.conE__image{
+  height: 10rem;
+  width: 10rem;
+  margin: 0 auto;
+}
+
+.conE__list :nth-child(even) {
+  display:block;
+}
+
+
+.conF__image {
+  height: 48vh;
+  min-height: 450px;
+}
+
+.conF__image2{
+  height: 48vh;
+  min-height: 450px;
+}
+
+.conG{
+  margin-top: -10rem;
+}
+
+.conG__image{
+  min-height: 650px;
+  margin-bottom: -25rem;
+}
+
+.conH {
+  min-height: 200px;
+}
+
+.conH__text{
+  width: 80%;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+}
+
+.conH__image{
+  position: relative;
+}
+
+.conI{
+  margin-top: 5rem;
+}
+
+.conI__image,
+.conI__box2 {
+  margin: 0;
+}
+
+.more__btn{
+  width: 170px;
+}
 
 .conA{
   background-image: url(../img/top.png);
@@ -507,132 +685,83 @@ div[class$="__text"],
   height: auto;
   min-height: 700px;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center bottom;
   background-size: 100%;
   background-attachment: fixed;
 }
 .conA::before{
   background:none;
 }
-.conA .container{
-  padding: 0!important;
-}
-
-.conA__text{
-  top:10%;
-  left:10%;
-}
-
-.conA h1,
-.conA p{
-  display: none;
-}
 
 .conA__image{
   width: 100%;
 }
 
-.card-group3{
-  display: block;
-}
-.card3{
-  width: auto;
-  margin: 1rem 0;
-}
-
-.card__text {
-  height: auto;
-}
-
-.card-group3 > :not(:nth-child(3n-2)) {
-  margin: 1rem 0;
-}
-
-
-
-.conE__image{
-  width: 100%;
-}
-
-.conE__list :nth-child(even) {
-  display:block;
-}
-
-.img__pc{
-  display: none;
-}
-
-.conF{
-  background-size: 200%;
-}
   
 
 /* --------------------------------- */
 /* header */
   .btn-gNav {
     display: block;
-}
+  }
 
-.gnav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    font-size: 16px;
-    box-sizing: border-box;
-    z-index: 1;
-    padding-top: 50px;
-    transition: .3s;
-}
+  .gnav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: 16px;
+      box-sizing: border-box;
+      z-index: 1;
+      padding-top: 50px;
+      transition: .3s;
+  }
 
-.gnav.open {
-    right: 0;
-}
+  .gnav.open {
+      right: 0;
+  }
 
-.gnav__list {
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    flex-direction: column;
-    text-align: center;
-    /*justify-content: center;*/
-}
+  .gnav__list {
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      flex-direction: column;
+      text-align: center;
+      /*justify-content: center;*/
+  }
 
-.gnav__item {
-    width: 86%;
-    padding: 15px;
-    border-bottom: var(--text-bright-color) 1px solid;
-}
+  .gnav__item {
+      width: 86%;
+      padding: 15px;
+      border-bottom: var(--text-bright-color) 1px solid;
+  }
 
-.gnav__link {
-  color:var(--text-bright-color);
+  .gnav__link {
+    color:var(--text-bright-color);
+  }
+
+  .gnav__list li + li{
+    padding: 1rem 2rem;
+  }
+
+  .gnav__list li:first-child{
+    padding: 1rem 2rem;
+  }
+
 }
 
 /* header */
-/* --------------------------------- */
-/* footer */
-.footA,
-.footB {
-  width: 100%;
-}
+ /* --------------------------------- */
+  /* footer */
 
+  
 
-.foot__box,
-.footB__list__box{
-  display: block;
-  justify-content: center;
-}
-
-.foot__box{
-  margin: 3rem 0;
-}
 
 /* footer */
 /* --------------------------------- */
-}
 
 /* ------------------------ */
 /* タブレットのときの制御 */

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
    <!-- responsive -->
-   <meta name="viewport" content="width=1200", initial-scale=1, user-scalable=no">
+   <meta name="viewport" content="width=device-width" />
   <title>title</title>
 
   <!-- リセットCSSの読み込み -->
@@ -47,12 +47,12 @@
 
           <nav class="gnav">
             <ul class="gnav__list">
-              <li class="gnav__item"><a class="gnav__link" href="#">Reservation</a></li>
-              <li class="gnav__item"><a class="gnav__link" href="#">Memu</a></li>
-              <li class="gnav__item"><a class="gnav__link" href="#">Gallery</a></li>
-              <li class="gnav__item"><a class="gnav__link" href="#">Staff</a></li>
-              <li class="gnav__item"><a class="gnav__link" href="#">About</a></li>
-              <li class="gnav__item"><a class="gnav__link" href="#">Blog</a></li>
+              <li class="gnav__item"><a class="gnav__link" href="#RESERVATION">Reservation</a></li>
+              <li class="gnav__item"><a class="gnav__link" href="#MENU">Memu</a></li>
+              <li class="gnav__item"><a class="gnav__link" href="#GALLERY">Gallery</a></li>
+              <li class="gnav__item"><a class="gnav__link" href="#STAFF">Staff</a></li>
+              <li class="gnav__item"><a class="gnav__link" href="#ABOUT">About</a></li>
+              <li class="gnav__item"><a class="gnav__link" href="#BLOG">Blog</a></li>
             </ul>
           </nav>
 
@@ -91,7 +91,7 @@
 
             <div class="conC__text">
 
-              <h2 class="title">営業日時</h2>
+              <h2 id="RESERVATION"  class="title">営業日時</h2>
               <p>月、水〜日: 10:00 - 20:00
               <br>※火曜日定休日</p>
 
@@ -108,7 +108,7 @@
         <div class="conD__image"></div>
     </section>
 
-    <section class="conE">
+    <section id="MENU" class="conE">
       <div class="container">
         
         <ul class="conE__list">
@@ -188,7 +188,7 @@
     <section class="conF">
       <div class="container">
 
-        <div class="title">Consept Image</div>
+        <div id="GALLERY" class="title">Consept Image</div>
         <div class="conF__image"></div>
 
         <div class="title">Store Image</div>
@@ -197,7 +197,7 @@
       </div>
     </section>
 
-    <section class="conG">
+    <section id="STAFF" class="conG">
       <div class="container">
 
         <div class="conG__image"></div>
@@ -205,7 +205,7 @@
       </div>
     </section>
 
-    <section class="conH">
+    <section id="ABOUT" class="conH">
         <div class="conH__box">
 
           <div class="conH__image"></div>
@@ -223,7 +223,7 @@
       </div>
   </section>
 
-  <section class="conI">
+  <section id="BLOG" class="conI">
     <div class="container">
 
         <div class="conI__box">
@@ -240,17 +240,48 @@
     </div>
   </section>
 
-      <!-- footer -->
-    <footer class="footer">
-        <div class="container">
+  <footer class="footer">
+    <div class="container">
 
-              <div class="foot">
-                  © COPY RIGHT
-              </div>
+      <nav class="sns">
 
-        </div>  
-    </footer>
-      <!-- /footer -->
+        <ul class="sns__list">
+            <li class="sns__item">
+                <a href="#" target="_blank">
+                    <span class="fa-brands fa-square-x-twitter" title="facebook" >
+                    </span>
+                </a>
+            </li>  
+            
+            <li class="sns__item">
+                <a href="#" target="_blank">
+                    <span class="fa-brands fa-square-facebook" title="instagram">
+                    </span>
+                </a>
+            </li>
+            
+            <li class="sns__item">
+                <a href="#" target="_blank">
+                    <span  class="fa-brands fa-square-instagram" title="note" >
+                    </span>
+                </a>
+            </li>
+  
+        </ul>
+    </nav>
+
+          <div class="footA">
+           <a href="#"><p>Terms of Use</p></a>
+           <a href="#"><p>Privacy Policy</p></a>
+          </div>
+          <div class="footB">
+          <p>ⒸCOPY LIGHT</p>
+          </div>
+          
+
+    </div>  
+</footer>
+  <!-- /footer -->
 
 </div>
 
