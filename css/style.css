@@ -138,7 +138,6 @@ div[class$="__text"],
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
-    background-attachment: fixed;
 }
   .conA .container{
     position: relative;
@@ -190,72 +189,6 @@ div[class$="__text"],
 
 /* conB */
 /* --------------------------------- */
-
-/* --------------------------------- */
-/* card 共通 */
-
-.card__imgframe{
-  width: 100%;
-  height: auto;
-  padding-top: 56.25%;
-  box-sizing: border-box;
-  background-position: center center;
-  background-size: 60%;
-  background-repeat: no-repeat;
-
-}
-.card__text{
-  width: 100%;
-  height: auto;
-  padding: 3rem;
-  box-sizing: border-box;
-}
-.card__text > * + *{
-  margin-top: 10px;
-}
-
-.card__text p{
-  margin-bottom: 3rem;
-}
-
-.cardA{
-  background-image: url(../img/priceA.png);
-}
-
-.cardB{
-  background-image: url(../img/priceB.png);
-}
-
-.accent{
-  background-color: var(--accent-color);
-}
-
-.accent h2,
-.accent p {
-  color: var(--text-bright-color);
-}
-
-.cardC{
-  background-image: url(../img/priceC.png);
-}
-
-.card__theme{
-  width: 100%;
-  margin: 0 auto;
-}
-
-.card__btn{
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-}
-
-/* card 共通 */
-/* --------------------------------- */
-
-
-
-/* --------------------------------- */
 /* conC */
 
 .conC {
@@ -277,90 +210,57 @@ div[class$="__text"],
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
-
-.conC__box{
-  position: relative;
+.conC__image{
+  width: 50%;
+}
+.conC .title{
+  text-align: left!important;
 }
 
-.conC__text h2,
-.conC__text p{
-  position: absolute;
-  top:50%;
-  left: 50%;
-
-}
-.card__text{
-  height: 800px;
+.conC__text{
+  display: block;
+  text-align: left!important;
 }
 
-.card-group3{
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
 
-  .card-group3 > :not(:nth-child(3n-2)){
-    margin-left: 20px;
-  }  
-
-  /* 否定セレクタ（:not）と1行目の要素（3n-2）の組み合わせで
-  最初の行以外の要素を選択しています。 */
-
-  .card-group3 > :nth-child(n+4){
-    margin-top: 20px;
-  }  
-  /* :nth-child(n+3)でカードグループの直接の子要素の中でも4番目以降のカードの要素だけを指定しています。 */
-
-
-  .card3{
-    width: calc((100% - 20px * 1) / 2);
-    height: auto;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,.2);
-    width: calc((100% - 20px * 2) / 3);
-    padding-bottom: 5rem;
-  }
-
-  
-
-   /*  3行の場合はカードとカードの間の隙間は２箇所あるので余白は20px*2になります。
-   そして全体から余白をのぞいたものを3行で割ります。 */
 
 /* conC */
 /* --------------------------------- */
 /* conD */
 
-.conD__image{
-  width: 100%;
-  margin: -1rem auto;
-}
-
-.conD .card3{
-  padding: 0;
+.conD__image {
+  height: 120vh;
+  min-height: 300px;
+  position: relative;
+  min-width:fit-content; 
+  background-image:url(../img/cut.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
 }
 
 /* conD */
 /* --------------------------------- */
 /* conE */
 
-.conE__image{
-  width: 65%;
+.conE{
+  margin-top: -10rem;
 }
 
 .conE__list{
-  padding: 0;
+  display: flex;
+  flex-wrap:wrap;
+}
+.conE__list::after{
+content: "";
+  width: 30%;
 }
 
-.conE__list :nth-child(even){
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.conE__item {
+	width: 30%;
+}
+.conE__image{
+  width: 100%;
 }
 
 /* conE */
