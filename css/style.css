@@ -247,21 +247,38 @@ div[class$="__text"],
   margin-top: -10rem;
 }
 
-.conE__list{
-  display: flex;
-  flex-wrap:wrap;
+.conE__box{
+  display: block;
 }
-.conE__list::after{
-content: "";
-  width: 30%;
+
+.conE__list{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 450px);
+  gap: 10px 20px
+}
+
+.conE__text{
+  margin-left: 1rem;
+  text-align: left!important;
+  font-family: "minion-pro", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .conE__item {
-	width: 30%;
+	width: 100%;
+  
 }
 .conE__image{
-  width: 100%;
+  height: 450px;
+  width: 450px;
+  object-fit: cover;
 }
+
+
+
 
 /* conE */
 /* --------------------------------- */
