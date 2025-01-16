@@ -1,0 +1,637 @@
+/* --------------------------------- */
+/* 共通 */
+
+:root {
+    --main-color: #fbf9f1;
+    --accent-color: #92c7cf;
+    --dark-main-color: #333;
+    --text-bright-color: #f2f2f2;
+    --icon-color: #fff;
+    --icon-bk-color: #ddd;
+    --large-width: 1000px;
+    --middle-width: 800px;
+}
+
+body {
+    margin: 0;
+    font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, ".SFNSDisplay-Regular", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Helvetica, "游ゴシック Medium", meiryo, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    background-color: var(--main-color);
+    color: var(--accent-color);
+}
+
+.container {
+    padding: 5rem 10rem; 
+}
+
+li {
+    list-style: none;
+    margin-right: 1rem;
+    margin: 1rem;
+
+}
+
+a {
+    color: var(--text-bright-color);
+    text-decoration: none;
+}
+
+h2{
+  font-weight:normal;
+}
+
+.wrapper{
+  overflow:hidden
+}
+
+.title{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.futura{
+  font-family: "futura-pt-condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+/** クラス指定の末尾の文字列が[__text]だったら*/
+div[class$="__text"],
+[class*="__text "]{
+
+  line-height: 3rem;
+  text-align: center;
+}
+
+/* 共通 */
+/* --------------------------------- */
+
+/* --------------------------------- */
+/* header */
+
+.header {
+    position: absolute;
+    width: 100%;
+    margin-bottom: 0;
+    background: transparent;
+}
+
+.gnav__list{
+  display: flex;
+	justify-content: center;
+  padding: 0;
+  
+}
+
+.gnav__item {
+   z-index: 999;
+   font-size: 1.5rem;
+   text-align: center;
+}
+
+.gnav__link{
+  display: block;
+}
+
+/* header */
+/* --------------------------------- */
+
+/* --------------------------------- */
+/* conA */
+
+.conA::before{
+  content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.conA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 450px;
+    position: relative;
+    /* 横幅をフィットさせる */
+    min-width:fit-content; 
+    /* background-image: url(../img/dummy.jpg); */
+    text-align: center;
+    color: var(--text-bright-color);
+    background: linear-gradient(to bottom, transparent 0%, transparent 70%, #fff 100%), url(../img/top__pc.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+  .conA .container{
+    position: relative;
+  }
+
+  .conA__text{
+    display: block;
+    position: absolute;
+    top:-100%;
+    left:-130%;
+    margin-bottom: 3rem;
+  }
+  .conA__text p{
+    margin-bottom: 3rem;
+  }
+
+  .conA__text h1,
+  .conA__text p
+  .conA__text a{
+
+    text-align: left;
+  }
+
+/* conA */
+/* --------------------------------- */
+
+/* --------------------------------- */
+/* conB */
+
+/* conB */
+/* --------------------------------- */
+
+/* --------------------------------- */
+/* card 共通 */
+
+.card__imgframe{
+  width: 100%;
+  height: auto;
+  padding-top: 56.25%;
+  box-sizing: border-box;
+  background-position: center center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+
+}
+.card__text{
+  width: 100%;
+  height: auto;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+.card__text > * + *{
+  margin-top: 10px;
+}
+
+.card__text p{
+  margin-bottom: 3rem;
+}
+
+.cardA{
+  background-image: url(../img/priceA.png);
+}
+
+.cardB{
+  background-image: url(../img/priceB.png);
+}
+
+.accent{
+  background-color: var(--accent-color);
+}
+
+.accent h2,
+.accent p {
+  color: var(--text-bright-color);
+}
+
+.cardC{
+  background-image: url(../img/priceC.png);
+}
+
+.card__theme{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card__btn{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* card 共通 */
+/* --------------------------------- */
+
+
+
+/* --------------------------------- */
+/* conC */
+
+.card__text{
+  height: 800px;
+}
+
+.card-group3{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .card-group3 > :not(:nth-child(3n-2)){
+    margin-left: 20px;
+  }  
+
+  /* 否定セレクタ（:not）と1行目の要素（3n-2）の組み合わせで
+  最初の行以外の要素を選択しています。 */
+
+  .card-group3 > :nth-child(n+4){
+    margin-top: 20px;
+  }  
+  /* :nth-child(n+3)でカードグループの直接の子要素の中でも4番目以降のカードの要素だけを指定しています。 */
+
+
+  .card3{
+    width: calc((100% - 20px * 1) / 2);
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
+    width: calc((100% - 20px * 2) / 3);
+    padding-bottom: 5rem;
+  }
+
+  
+
+   /*  3行の場合はカードとカードの間の隙間は２箇所あるので余白は20px*2になります。
+   そして全体から余白をのぞいたものを3行で割ります。 */
+
+/* conC */
+/* --------------------------------- */
+/* conD */
+
+.conD__image{
+  width: 100%;
+  margin: -1rem auto;
+}
+
+.conD .card3{
+  padding: 0;
+}
+
+/* conD */
+/* --------------------------------- */
+/* conE */
+
+.conE__image{
+  width: 65%;
+}
+
+.conE__list{
+  padding: 0;
+}
+
+.conE__list :nth-child(even){
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* conE */
+/* --------------------------------- */
+/* conF */
+
+.conF{
+  height: 100vh;
+  min-height: 450px;
+  background-image: url(../img/seo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  margin-right: 1rem;
+
+}
+/* conF */
+/* --------------------------------- */
+/* hamburger */
+
+.head__image{
+  position: absolute;
+  z-index: 999;
+  top:0;
+  right:0;
+  position: fixed;
+}
+
+.hamburger .btn-gNav {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  width: 30px;
+  height: 24px;
+  z-index: 12;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.hamburger .btn-gNav span {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 10px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.hamburger .btn-gNav span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger .btn-gNav span:nth-child(2) {
+  top: 10px;
+}
+
+.hamburger .btn-gNav span:nth-child(3) {
+  top: 20px;
+}
+
+.hamburger .btn-gNav.open span:nth-child(1) {
+  background: #ffffff;
+  top: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.hamburger .btn-gNav.open span:nth-child(2),
+.hamburger .btn-gNav.open span:nth-child(3) {
+  top: 6px;
+  background: #ffffff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* hamburger */
+/* --------------------------------- */
+
+/* --------------------------------- */
+/*----- footer -----*/
+
+.footer{
+  width: 100%;
+  height: auto;
+  background-color:var(--accent-color);
+  color: var(--text-bright-color);
+  bottom: 0; /*下に固定*/
+  margin-top: 3rem;
+}
+
+
+.foot {
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+
+
+
+
+/*-----footer-----*/
+/* --------------------------------- */
+  
+ /* ------------------------ */
+/* phoneのときの制御 */
+@media (max-width:599px) {
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 3rem!important;
+}
+
+.title{
+  font-size: 2rem;
+}
+
+div[class$="__text"], 
+[class*="__text "] {
+ line-height: 2rem;
+}
+
+.head__image{
+  width: 30%;
+}
+
+.conA{
+  background-image: url(../img/top.png);
+  width: 100%;
+  height: auto;
+  min-height: 700px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+.conA::before{
+  background:none;
+}
+.conA .container{
+  padding: 0!important;
+}
+
+.conA__text{
+  top:10%;
+  left:10%;
+}
+
+.conA h1,
+.conA p{
+  display: none;
+}
+
+.conA__image{
+  width: 100%;
+}
+
+.card-group3{
+  display: block;
+}
+.card3{
+  width: auto;
+  margin: 1rem 0;
+}
+
+.card__text {
+  height: auto;
+}
+
+.card-group3 > :not(:nth-child(3n-2)) {
+  margin: 1rem 0;
+}
+
+
+
+.conE__image{
+  width: 100%;
+}
+
+.conE__list :nth-child(even) {
+  display:block;
+}
+
+.img__pc{
+  display: none;
+}
+
+.conF{
+  background-size: 200%;
+}
+  
+
+/* --------------------------------- */
+/* header */
+  .btn-gNav {
+    display: block;
+}
+
+.gnav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    box-sizing: border-box;
+    z-index: 1;
+    padding-top: 50px;
+    transition: .3s;
+}
+
+.gnav.open {
+    right: 0;
+}
+
+.gnav__list {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    /*justify-content: center;*/
+}
+
+.gnav__item {
+    width: 86%;
+    padding: 15px;
+    border-bottom: var(--text-bright-color) 1px solid;
+}
+
+.gnav__link {
+  color:var(--text-bright-color);
+}
+
+/* header */
+/* --------------------------------- */
+/* footer */
+.footA,
+.footB {
+  width: 100%;
+}
+
+
+.foot__box,
+.footB__list__box{
+  display: block;
+  justify-content: center;
+}
+
+.foot__box{
+  margin: 3rem 0;
+}
+
+/* footer */
+/* --------------------------------- */
+}
+
+/* ------------------------ */
+/* タブレットのときの制御 */
+@media (min-width:600px) and (max-width:799px) {
+
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .img__ph {
+    display: none;
+  }
+
+}
+/* タブレットのときの制御 */
+/* ------------------------ */
+
+/* ------------------------ */
+/* PCのときの制御 */
+@media (min-width:800px)  {
+
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+      font-size: 24px;
+  }
+
+  p {
+      font-size: 18px;
+  }
+
+  .btn-gNav,
+  .img__ph {
+    display: none;
+  }
+
+
+
+
+}
+
+
+/* PCのときの制御 */
+/* ------------------------ */
+
+/* ------------------------ */
+/* ダークモードの対応 */
+.div {
+  color: light-dark(#333, #fff);
+  background-color: light-dark(#fff, #333);
+}
+/* ダークモードの対応 */
+/* ------------------------ */
