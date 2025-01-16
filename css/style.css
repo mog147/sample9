@@ -5,7 +5,7 @@
     --main-color: #fff;
     --accent-color: #92c7cf;
     --dark-main-color: #333;
-    --text-bright-color: #f2f2f2;
+    --text-bright-color: #ececec;
     --icon-color: #fff;
     --icon-bk-color: #ddd;
     --large-width: 1000px;
@@ -51,12 +51,9 @@ section{
 
 .title{
   text-align: center;
-  font-size: 3rem;
-}
-
-.futura{
-  font-family: "futura-pt-condensed", sans-serif;
-  font-weight: 500;
+  font-size: 2rem;
+  font-family: "minion-pro", serif;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -277,6 +274,9 @@ div[class$="__text"],
   object-fit: cover;
 }
 
+.conE__text a{
+  color: var(--dark-main-color);
+}
 
 
 
@@ -284,18 +284,114 @@ div[class$="__text"],
 /* --------------------------------- */
 /* conF */
 
-.conF{
-  height: 100vh;
+.conF__image{
+  height: 250vh;
   min-height: 450px;
-  background-image: url(../img/seo.png);
+  background-image: url(../img/gallery.png);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center top;
   background-size: 100%;
-  margin-right: 1rem;
+
+}
+
+.conF__image2{
+  height: 170vh;
+  min-height: 450px;
+  background-image: url(../img/store.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
 
 }
 /* conF */
 /* --------------------------------- */
+/* conG */
+
+  .conG__image{
+    height: 220vh;
+    min-height: 450px;
+    background-image: url(../img/staff.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+}
+
+/* conG */
+/* --------------------------------- */
+/* conH */
+
+.conH {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 750px;
+  position: relative;
+  /* 横幅をフィットさせる */
+  min-width:fit-content; 
+  text-align: center;
+  background-image:url(../img/about.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.conH__image{
+  width: 50%;
+}
+.conH .title{
+  text-align: left!important;
+}
+
+.conH__text{
+  display: block;
+  text-align: left!important;
+}
+
+
+/* conH */
+/* --------------------------------- */
+/* conI */
+
+.conI__box{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.conI__box2{
+  margin-top: -10rem;
+}
+
+.more__btn p{
+  color: var(--dark-main-color);
+  font-family: "minion-pro", serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 500px;
+  padding-left: 155px;
+}
+
+
+.conI__box2 img {
+  width: 80%;
+}
+
+.img__wrap__l{
+  text-align:left;
+}
+
+.img__wrap__r{
+  text-align:right;
+}
+
+.conI__image{
+  width: 9%;
+  margin-right:8rem ;
+}
+/* conI */
+/* --------------------------------- */
+
+
 /* hamburger */
 
 .hamburger .btn-gNav {
@@ -359,7 +455,7 @@ div[class$="__text"],
 .footer{
   width: 100%;
   height: auto;
-  background-color:var(--accent-color);
+  background-color:var(--text-bright-color);
   color: var(--text-bright-color);
   bottom: 0; /*下に固定*/
   margin-top: 3rem;
@@ -396,10 +492,6 @@ div[class$="__text"],
 
   .container {
     padding: 3rem!important;
-}
-
-.title{
-  font-size: 2rem;
 }
 
 div[class$="__text"], 
