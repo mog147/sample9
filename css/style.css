@@ -41,13 +41,6 @@ h2{
   font-weight:normal;
 }
 
-.wrapper{
-  overflow:hidden
-}
-
-section{
-  margin: 10rem 0;
-}
 
 .title{
   text-align: center;
@@ -55,6 +48,7 @@ section{
   font-family: "minion-pro", serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: -5rem;
 }
 
 
@@ -118,24 +112,81 @@ div[class$="__text"],
 /* --------------------------------- */
 /* conA */
 
+.conA,
+.conA__image{
+  min-height: 1080px;
+  height: 150vh;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background: linear-gradient(to bottom, transparent 0%, transparent 70%, #fff 100%), url(../img/top1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  background-position: center bottom;
+}
+
+.main{
+  position: absolute;
+  top:30%;
+  right: 0;
+}
+
+.photo3{
+  width: 100%;
+ display: flex;
+ justify-content: flex-end;
+ text-align: center; 
+}
+.photo3__image{
+  margin: 0 1rem;
+}
+
+
+
+.loading.is-active {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-animation {
+  width: 100vw;
+  height: 90vh;
+  transition: all 1s;
+  background-image: url(../img/top2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  background-position: center center;
+}
+
+.loading-animation.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 
 .conA {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     height: 100vh;
     min-height: 450px;
     position: relative;
-    /* 横幅をフィットさせる */
-    min-width:fit-content; 
-    /* background-image: url(../img/dummy.jpg); */
-    text-align: center;
-    color: var(--text-bright-color);
-    background: linear-gradient(to bottom, transparent 0%, transparent 70%, #fff 100%), url(../img/top__pc.png);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-}
+  }
+
   .conA .container{
     position: relative;
   }
@@ -157,6 +208,8 @@ div[class$="__text"],
 
     text-align: left;
   }
+
+
 
 /* conA */
 /* --------------------------------- */
@@ -188,6 +241,8 @@ div[class$="__text"],
 /* --------------------------------- */
 /* conC */
 
+
+
 .conC {
   display: flex;
   align-items: center;
@@ -201,6 +256,7 @@ div[class$="__text"],
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  margin: 10rem 0;
 }
 
 .original-box-shadow {
@@ -229,6 +285,11 @@ div[class$="__text"],
 /* --------------------------------- */
 /* conD */
 
+.conD{
+  margin: 0;
+}
+
+
 .conD__image {
   height: 100vh;
   min-height: 300px;
@@ -237,15 +298,14 @@ div[class$="__text"],
   background-position: center top;
   background-size: 100%;
   object-fit: cover;
-  padding-bottom: 20rem;
+  padding-bottom: 15rem;
 }
 
 /* conD */
 /* --------------------------------- */
 /* conE */
-
 .conE{
-  margin-top: -10rem;
+  margin: 0;
 }
 
 .conE__box{
@@ -346,6 +406,7 @@ div[class$="__text"],
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  margin-top: -10rem;
 }
 
 .conH__image{
@@ -587,6 +648,34 @@ div[class$="__text"],
  line-height: 2rem;
 }
 
+.loading{
+  background-image: url(../img/top__phoneA.png);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center top;
+  background-size: 100%;
+}
+
+.loading-animation{
+  background-image: url(../img/top__phoneB.png);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center top;
+  background-size: contain;
+}
+
+.main{
+  display: none;
+}
+
+.photo3{
+  display:none;
+}
+
 
 .conB__image{
   top: 50%;
@@ -654,12 +743,13 @@ div[class$="__text"],
 
 .conH {
   min-height: 200px;
+  margin: 3rem 0;
 }
 
 .conH__text{
   width: 80%;
   position: absolute;
-  top: 7%;
+  top: 68%;
   left: 50%;
 }
 
@@ -681,23 +771,11 @@ div[class$="__text"],
 }
 
 .conA{
-  background-image: url(../img/top.png);
-  width: 100%;
-  height: auto;
-  min-height: 700px;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 100%;
-  background-attachment: fixed;
+  width: 100vw;
 }
 .conA::before{
   background:none;
 }
-
-.conA__image{
-  width: 100%;
-}
-
   
 
 /* --------------------------------- */
