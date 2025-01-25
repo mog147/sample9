@@ -58,6 +58,8 @@ div[class$="__text"],
 
   line-height: 3rem;
   text-align: center;
+  position: absolute;
+  left: 0;
 }
 
 /* 共通 */
@@ -131,7 +133,7 @@ div[class$="__text"],
   z-index: 9999;
   opacity: 1;
   visibility: visible;
-  background-position: center bottom;
+  background-position: center top;
 }
 
 .main{
@@ -164,13 +166,13 @@ div[class$="__text"],
   background-image: url(../img/top2.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  z-index: 9999;
+  z-index: 100;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   opacity: 0;
   visibility: hidden;
-  background-position: center center;
+  background-position: center top;
 }
 
 .loading-animation.is-active {
@@ -217,7 +219,9 @@ div[class$="__text"],
 /* --------------------------------- */
 /* conB */
 
-
+.conB{
+  margin-top: 15rem;
+}
 
 .conB__box{
   position: relative;
@@ -676,6 +680,9 @@ div[class$="__text"],
   display:none;
 }
 
+.conB{
+  margin-top: 10rem;
+}
 
 .conB__image{
   top: 50%;
@@ -688,12 +695,17 @@ div[class$="__text"],
 
 .conC{
   min-height: 200px;
+  margin: 5rem 0;
 }
 .conD__image{
-  height: 100vh;
+  height: 65vh;
   margin-top: 3rem;
-  margin-bottom: -30rem;
 }
+
+.conC__text{
+ left: 10%!important;
+}
+
 .conE{
   margin-top: -30rem;
 }
@@ -715,6 +727,10 @@ div[class$="__text"],
   height: 10rem;
   width: 10rem;
   margin: 0 auto;
+}
+
+.conE__text{
+  position: static!important;
 }
 
 .conE__list :nth-child(even) {
@@ -747,18 +763,11 @@ div[class$="__text"],
 }
 
 .conH__text{
-  width: 80%;
-  position: absolute;
-  top: 68%;
-  left: 50%;
+  left: 45%!important;
 }
 
 .conH__image{
-  position: relative;
-}
-
-.conI{
-  margin-top: 5rem;
+  width: 80%;
 }
 
 .conI__image,
